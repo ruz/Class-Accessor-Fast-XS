@@ -49,6 +49,14 @@ our $VERSION = '0.03';
 use XSLoader;
 XSLoader::load( __PACKAGE__, $VERSION );
 
+sub new {
+    return bless
+        defined $_[1]
+            ? {%{$_[1]}} # make a copy of $fields.
+            : {},
+        ref $_[0] || $_[0];
+}
+
 sub make_ro_accessor {
     my($class, $field) = @_;
 
