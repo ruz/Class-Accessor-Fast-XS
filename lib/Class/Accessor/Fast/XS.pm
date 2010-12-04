@@ -3,6 +3,19 @@
 
 Class::Accessor::Fast::XS - XS replacement for Class::Accessor::Fast
 
+=head1 OBSOLETE NOTE
+
+This module has been stated rudimentary in favor of
+L<Class::XSAccesor::Compat>, that implements the same API.
+Steffen Mueller did a great job improving concept of XS
+accessors in L<Class::XSAccesor> framework and keep improving it
+further.
+
+At this moment (Dec 2010) Class::XSAccesor::Compat generates 25%
+faster accessors than this module and has some thread safety fixes.
+There is no point in porting fixes or improvements from Steffen's
+code as you can just change the name and switch over.
+
 =head1 DESCRIPTION
 
 This module is a XS based replacement for L<Class::Accessor::Fast>.
@@ -66,8 +79,6 @@ sub make_accessor {
     return \&{$sub};
 }
 
-1;
-
 =head1 CREDITS
 
 This code is heavily based on Steffen Mueller's L<Class::XSAccessor>.
@@ -91,3 +102,4 @@ it under the same terms as Perl itself.
 
 =cut
 
+1;
