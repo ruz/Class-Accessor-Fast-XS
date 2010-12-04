@@ -1,0 +1,18 @@
+0.03 2009-04-30
+
+    * fix behaviour of read only accessor when value is not set.
+      Thanks to Slaven Rezic for bug report, patch and tests.
+
+0.02 2008-11-12
+
+    * updated docs with:
+    ** some general notes on battle for better accessors
+    ** credits
+    ** license
+    ** references to other implementations
+    ** references to benchmarks
+    * fixed tests for users of old Class::Accessor
+
+0.01 2008-09-19
+
+    * initial release
